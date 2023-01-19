@@ -11,13 +11,20 @@
   --hero-background-color: #2e2f42;
   --white-color: #ffffff;
 }
-.list {
-  list-style: none;
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
-.link {
-  text-decoration: none;
+ul {
+  margin: 0;
+  padding-left: 0;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.02em;
@@ -27,11 +34,34 @@ body {
   font-size: 16px;
 }
 
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  width: 1158;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* HEADER  */
 
 .header {
+  padding: 24px 156px;
+}
+.header-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .main-nav {
+  display: flex;
 }
 .logo {
   font-family: "Raleway", sans-serif;
@@ -41,14 +71,18 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--dark-color);
+
+  margin-right: 76px;
 }
 
 .accent-logo {
   color: var(--primary-brand-color);
 }
 .header-list {
+  display: flex;
 }
-.header-item {
+.header-item:not(:last-child) {
+  margin-right: 40px;
 }
 .nav-link {
   font-weight: 500;
@@ -63,8 +97,10 @@ body {
 .header-contacts {
 }
 .contacts-list {
+  display: flex;
 }
-.contacts-item {
+.contacts-item:not(:last-child) {
+  margin-right: 40px;
 }
 .contacts-link {
   color: var(--text-color);
@@ -79,29 +115,45 @@ body {
 
 .hero {
   background-color: var(--hero-background-color);
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .hero-title {
+  max-width: 494px;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   color: var(--white-color);
+
+  margin: 0 auto;
+  margin-bottom: 48px;
 }
 
 .main-btn {
+  min-width: 169px;
+  height: 56px;
   font-family: "Roboto", sans-serif;
   background-color: var(--primary-brand-color);
   color: var(--white-color);
   font-weight: 500;
   letter-spacing: 0.04em;
   cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 .main-btn:hover,
 .main-btn:focus {
   background: var(--pressed-state-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  color: var(--white-color)
+  color: var(--white-color);
 }
 
 /* FEATURES */
@@ -201,7 +253,8 @@ body {
 .filter-buttons:hover,
 .filter-buttons:focus {
   background: var(--pressed-state-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   color: var(--white-color);
 }
 /* --------PORTFOLIO EXAMPLES----------- */
